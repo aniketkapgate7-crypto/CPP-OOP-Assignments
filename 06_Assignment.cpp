@@ -51,9 +51,11 @@ class Employee{
 int main(){
     cout << "--- HR Recruitment Process ---" << endl;
     {
-        Employee employee1("2026SOC0794", "2026SOC0794", "Aniket", 3);
+        Employee employee1("05", "2026SOC0794", "Aniket", 3);
 
         employee1.displayD();
         employee1.processR();
+
+        return 0;
     }
 };
