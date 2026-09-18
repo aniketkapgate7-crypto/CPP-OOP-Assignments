@@ -5,6 +5,7 @@ class Book {
 private:
     char title[100];
     char author[100];
+    char isbn[30];
     float price;
 
 public:
@@ -15,23 +16,27 @@ public:
         cout << "Enter author name: ";
         cin.getline(author, 100);
 
-        cout << "Enter price: ";
+        cout << "Enter ISBN: ";
+        cin.getline(isbn, 30);
+
+        cout << "Enter book price: ";
         cin >> price;
     }
 
     void displayDetails() {
         cout << "\n--- Book Details ---" << endl;
-        cout << "Title: " << title << endl;
-        cout << "Author: " << author << endl;
-        cout << "Price: Rs. " << price << endl;
+        cout << "Title  : " << title << endl;
+        cout << "Author : " << author << endl;
+        cout << "ISBN   : " << isbn << endl;
+        cout << "Price  : Rs. " << price << endl;
     }
 };
 
 int main() {
-    Book book;
+    Book book1;
 
-    book.inputDetails();
-    book.displayDetails();
+    book1.inputDetails();
+    book1.displayDetails();
 
     return 0;
 }

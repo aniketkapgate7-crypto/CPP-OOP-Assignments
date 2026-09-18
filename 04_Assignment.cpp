@@ -27,12 +27,17 @@ public:
         cout << "Author: " << author << endl;
         cout << "Price: Rs. " << price << endl;
     }
+
+    // Destructor
+    ~Book(){
+        cout << "Erase Book information" << endl;
+    }
 };
 
 int main() {
     Book book1;
 
-    Book book2("C++ Programming", "Bjarne Stroustrup", 799);
+    Book book2("IRON MAN", "MARVAL", 7999);
 
     cout << "Book 1 Details:" << endl;
     book1.display();
