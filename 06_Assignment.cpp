@@ -1,61 +1,67 @@
 #include <iostream>
 using namespace std;
 
-class Majdoor {
-    private:
-    const char* serialNumber;   
-    const char* MajdoorID;
-    const char* MajdoorName;
+class Employee
+{
+private:
+    const char *serialNumber;
+    const char *EmployeeID;
+    const char *EmployeeName;
     int workExperience;
-    int Dihadi;
+    int salary;
 
-    public:
-    Majdoor(const char* serialNumber,
-    const char* MajdoorID   ,
-    const char* MajdoorName,
-    int workExperience,
-    int Dihadi)
+public:
+    Employee(const char *serialNumber,
+             const char *EmployeeID,
+             const char *EmployeeName,
+             int workExperience,
+             int salary)
     {
-    this->serialNumber = serialNumber;  
-    this->MajdoorID = MajdoorID;
-    this->MajdoorName = MajdoorName;
-    this->workExperience = workExperience;
-    this->Dihadi = Dihadi;
+        this->serialNumber = serialNumber;
+        this->EmployeeID = EmployeeID;
+        this->EmployeeName = EmployeeName;
+        this->workExperience = workExperience;
+        this->salary = salary;
 
-    cout<<"\nDihadi Majdoor record created successfully!"<<endl;
+        cout << "\nEmployee record created successfully!" << endl;
     }
 
-    void displayD() {
+    void displayD()
+    {
         cout << "Serial Number: " << serialNumber << endl;
-        cout << "Majdoor ID: " << MajdoorID << endl;
-        cout << "Majdoor Name: " << MajdoorName << endl;
+        cout << "Employee ID: " << EmployeeID << endl;
+        cout << "Employee Name: " << EmployeeName << endl;
         cout << "Work Experience: " << workExperience << " years" << endl;
-        cout << "Dihadi: " << Dihadi << endl;
+        cout << "Salary: " << salary << endl;
     }
 
-    void processR() {
+    void processR()
+    {
         cout << "\nProcessing recruitment data..." << endl;
 
-        if (workExperience >= 2) {
-            cout << "Majdoor is eligible for interview." << endl;
+        if (workExperience >= 2)
+        {
+            cout << "Employee is eligible for interview." << endl;
         }
-        else {
-            cout << "Majdoor is not eligible for interview." << endl;
+        else
+        {
+            cout << "Employee is not eligible for interview." << endl;
         }
 
         cout << "Recruitment process completed." << endl;
     }
 
-
-    ~Majdoor(){
-        cout<<"\nDihadi Majdoor record deleted successfully !!"<<endl;
+    ~Employee()
+    {
+        cout << "\nEmployee record deleted successfully !!" << endl;
     }
 };
 
-int main(){
+int main()
+{
     cout << "--- HR Recruitment Process ---" << endl;
     {
-        Majdoor employee1("05", "2026SOC0794", "Aniket", 3, 6000000);
+        Employee employee1("06", "2026SOC0795", "Sallu_Bhai", 1, 150);
 
         employee1.displayD();
         employee1.processR();
