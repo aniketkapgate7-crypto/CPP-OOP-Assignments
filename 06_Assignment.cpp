@@ -1,71 +1,36 @@
 #include <iostream>
 using namespace std;
 
-class Employee
-{
-private:
-    const char *serialNumber;
-    const char *EmployeeID;
-    const char *EmployeeName;
-    int workExperience;
-    int salary;
-
+class employee {
 public:
-    Employee(const char *serialNumber,
-             const char *EmployeeID,
-             const char *EmployeeName,
-             int workExperience,
-             int salary)
-    {
-        this->serialNumber = serialNumber;
-        this->EmployeeID = EmployeeID;
-        this->EmployeeName = EmployeeName;
-        this->workExperience = workExperience;
-        this->salary = salary;
+    string name;
+    int id;
+    float salary;
 
-        cout << "\nEmployee record created successfully!" << endl;
+    employee(string n, int i, float s) {
+        name = n;
+        id = i;
+        salary = s;
     }
 
-    void displayD()
-    {
-        cout << "Serial Number: " << serialNumber << endl;
-        cout << "Employee ID: " << EmployeeID << endl;
-        cout << "Employee Name: " << EmployeeName << endl;
-        cout << "Work Experience: " << workExperience << " years" << endl;
-        cout << "Salary: " << salary << endl;
+    void display() {
+        cout<< "\n---Employee Details---" << endl;
+        cout << "Employee Name:  " << name << endl;
+        cout << "Employee ID:  " << id << endl;
+        cout << "Employee Salary:  " << salary << endl;
     }
 
-    void processR()
-    {
-        cout << "\nProcessing recruitment data..." << endl;
-
-        if (workExperience >= 2)
-        {
-            cout << "Employee is eligible for interview." << endl;
-        }
-        else
-        {
-            cout << "Employee is not eligible for interview." << endl;
-        }
-
-        cout << "Recruitment process completed." << endl;
-    }
-
-    ~Employee()
-    {
-        cout << "\nEmployee record deleted successfully !!" << endl;
+    ~employee() {
+        cout << "\nDetails are Erased";
     }
 };
 
-int main()
-{
-    cout << "--- HR Recruitment Process ---" << endl;
-    {
-        Employee employee1("06", "2026SOC0795", "Sallu_Bhai", 1, 150);
+int main() {
+    employee e1("Thor", 67, 6000);
+    e1.display();
 
-        employee1.displayD();
-        employee1.processR();
+    employee e2("Monkey D. Luffy", 14, 10000);
+    e2.display();
 
-        return 0;
-    }
-};
+    return 0;
+}
