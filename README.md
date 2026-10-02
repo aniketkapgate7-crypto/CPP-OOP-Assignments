@@ -12,7 +12,6 @@ This repository contains C++ programs completed as part of my Object-Oriented Pr
 | `04_Assignment.cpp` | Default and parameterized constructors |
 | `05_Assignment.cpp` | Using the `this` pointer |
 | `06_Assignment.cpp` | Constructor and destructor |
-| '07_Assignment.cpp' | University Information System |
 
 ## OOP Concepts Covered
 
@@ -25,7 +24,6 @@ This repository contains C++ programs completed as part of my Object-Oriented Pr
 - Constructor overloading
 - `this` pointer
 - Destructor
-- Inheritance
 
 ## Requirements
 
